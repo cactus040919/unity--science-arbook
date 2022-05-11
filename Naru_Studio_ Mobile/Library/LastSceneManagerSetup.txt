@@ -1,0 +1,5 @@
+sceneSetups:
+- path: Assets/GUIPack-Clean&Minimalist/Demo/Scenes/Themes/Light/Light - Game.unity
+  isLoaded: 1
+  isActive: 1
+  isSubScene: 0
