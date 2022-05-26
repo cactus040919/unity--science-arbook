@@ -2516,13 +2516,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 813849914}
+  - component: {fileID: 813849915}
   m_Layer: 0
   m_Name: GoUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &813849914
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2533,7 +2534,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 870009204}
+  - {fileID: 1107745488}
   m_Father: {fileID: 778704210}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2542,6 +2545,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &813849915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813849913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b5dd8a2deb6a754484af3745d469db7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: 
 --- !u!1 &816664783
 GameObject:
   m_ObjectHideFlags: 0
@@ -2646,11 +2662,11 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 870009203}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1522486260}
+  m_Father: {fileID: 813849914}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -2798,7 +2814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &874647719
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2972,6 +2988,10 @@ MonoBehaviour:
   - {fileID: 1370323400}
   currentQuestion: 0
   QuestionText: {fileID: 1192954867}
+  ScoreText: {fileID: 870009205}
+  QuizUI: {fileID: 917389666}
+  GoUI: {fileID: 813849913}
+  score: 0
 --- !u!1 &935853399
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,6 +3135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 958863153}
   - component: {fileID: 958863154}
+  - component: {fileID: 958863155}
   m_Layer: 0
   m_Name: Main UI
   m_TagString: Untagged
@@ -3160,6 +3181,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: ARScene
+--- !u!114 &958863155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958863152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab7dcff32ebda54fab82353d3bff296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1005707181
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,9 +3690,8 @@ GameObject:
   - component: {fileID: 1107745492}
   - component: {fileID: 1107745491}
   - component: {fileID: 1107745490}
-  - component: {fileID: 1107745489}
   m_Layer: 0
-  m_Name: Retry
+  m_Name: Exit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3677,7 +3709,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1441733664}
-  m_Father: {fileID: 1522486260}
+  m_Father: {fileID: 813849914}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -3685,20 +3717,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 240, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1107745489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1107745487}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 961d3be1c482b33489be599dd5d97d03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCorrect: 0
-  quizManger: {fileID: 917389670}
 --- !u!114 &1107745490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,9 +3761,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1107745489}
-        m_TargetAssemblyTypeName: AnswerScript, Assembly-CSharp
-        m_MethodName: Answer
+      - m_Target: {fileID: 813849915}
+        m_TargetAssemblyTypeName: SceneManger, Assembly-CSharp
+        m_MethodName: SceneReload
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3814,7 +3832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8062235041963728176, guid: b858a2defee0b8148b466367e22a7242, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8062235041963728176, guid: b858a2defee0b8148b466367e22a7242, type: 3}
       propertyPath: m_AnchorMax.x
@@ -5148,7 +5166,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB2E4\uC2DC\uD558\uAE30"
+  m_Text: "\uB098\uAC00\uAE30"
 --- !u!222 &1441733666
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5249,7 +5267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1522486260
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5260,9 +5278,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 870009204}
-  - {fileID: 1107745488}
+  m_Children: []
   m_Father: {fileID: 778704210}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5754,7 +5770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1965156563
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6045,7 +6061,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 958863155}
         m_TargetAssemblyTypeName: MainMenuUI, Assembly-CSharp
         m_MethodName: OnClickExitButton
         m_Mode: 1

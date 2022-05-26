@@ -10,15 +10,27 @@ public class QuizManger : MonoBehaviour
     public int currentQuestion;
 
     public Text QuestionText;
+    public Text ScoreText;
+
+    public GameObject QuizUI;
+    public GameObject GoUI;
+
+    int totalQuestion = 0;
+    public int score;
+
+    SceneManger sceneManger;
 
     private void Start()
     {
+        totalQuestion = QnA.Count;
+        sceneManger = new SceneManger();
+        GoUI.SetActive(false);
         makeQuestion();
     }
 
     void makeQuestion()
     {
-        if(QnA.Count >0)
+        if(QnA.Count > 0)
         {
             currentQuestion = Random.Range(0, QnA.Count);
             QuestionText.text = QnA[currentQuestion].Question;
@@ -27,6 +39,8 @@ public class QuizManger : MonoBehaviour
         else
         {
             Debug.Log("문제를 다 풀었습니다.");
+            GameOver();
+            currentQuestion = 0;
         }
     }
 
@@ -46,6 +60,7 @@ public class QuizManger : MonoBehaviour
 
     public void correct()
     {
+        score += 1;
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
     }
@@ -54,5 +69,12 @@ public class QuizManger : MonoBehaviour
     {
         QnA.RemoveAt(currentQuestion);
         makeQuestion();
+    }
+
+    void GameOver()
+    {
+        QuizUI.SetActive(false);
+        GoUI.SetActive(true);
+        ScoreText.text = score + "개 맞았습니다.";
     }
 }

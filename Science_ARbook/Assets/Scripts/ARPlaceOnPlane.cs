@@ -9,6 +9,9 @@ public class ARPlaceOnPlane : MonoBehaviour
     public ARRaycastManager arRaycaster;
     public GameObject placeObject;
 
+    public GameObject[] planetPrefabs;
+    public GameObject player;
+
     GameObject spawnObject;
 
     // Start is called before the first frame update
@@ -24,6 +27,7 @@ public class ARPlaceOnPlane : MonoBehaviour
         //UpdateCenterObject();
     }
 
+    //오브젝트가 플레이어가 터치한 곳으로 이동.
     private void PlaceObjectByTouch()
     {
         if(Input.touchCount > 0)
