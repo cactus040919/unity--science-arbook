@@ -4,8 +4,9 @@ using UnityEngine;
 
 public enum Planet
 {
-    Mercury, Venus, Earth, Mars
+   Sun, Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune
 }
+
 public class DataManger : MonoBehaviour
 {
     public static DataManger instance;

@@ -1,0 +1,4 @@
+#Tue Jun 21 17:32:12 KST 2022
+base.0=C\:\\Users\\USER\\Desktop\\Unity\\unity--science-arbook\\Science_ARbook\\Temp\\gradleOut\\launcher\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

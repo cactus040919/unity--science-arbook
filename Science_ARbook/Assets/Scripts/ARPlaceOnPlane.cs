@@ -10,14 +10,13 @@ public class ARPlaceOnPlane : MonoBehaviour
     public GameObject placeObject;
 
     public GameObject[] planetPrefabs;
-    public GameObject player;
 
     GameObject spawnObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnObject = Instantiate(planetPrefabs[(int)DataManger.instance.currentPlanet]);
     }
 
     // Update is called once per frame
@@ -52,7 +51,7 @@ public class ARPlaceOnPlane : MonoBehaviour
         }
     }
 
-    //오브젝트가 카메라 센터에 생성
+    //오브젝트가 카메라 센터에 생성 //현재 사용하지 않음
     private void UpdateCenterObject()
     {
         Vector3 screenCenter = Camera.current.ViewportToScreenPoint(new Vector3(0.5f, 0.5f));

@@ -3180,7 +3180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5dd8a2deb6a754484af3745d469db7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: ARScene
+  sceneName: SelectScene
 --- !u!114 &958863155
 MonoBehaviour:
   m_ObjectHideFlags: 0
